@@ -516,6 +516,7 @@ class Database(object):
 
         # clean up temporary columns
         self.df.drop(columns=['al_seq', 'rc_seq'], inplace=True)
+        self.df.to_csv('sampled_genomes_ftp_urls.csv', index=False)
 
     def download_genomes(self):
         """Download genomes from NCBI.
