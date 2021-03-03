@@ -1218,7 +1218,7 @@ class Analyze(object):
         2. Export scatter plot to image file `scatter.png`.
         """
         fig = plt.figure(figsize=(5, 5))
-        plt.scatter('close', 'distal', c='hgt', data=self.df)
+        plt.scatter('close', 'distal', c='hgt', data=self.df, alpha=0.4)
         plt.xlabel('Close')
         plt.ylabel('Distal')
         save_figure(fig, join(self.output, 'scatter.png'))
